@@ -17,7 +17,7 @@ project/
 │   ├── random_data.json        # Generated user data (JSON)
 │   └── random_data.bin         # Same data in binary format
 ├── generate_data.py            # Script to generate user data
-├── app.py                      # Flask app to serve and upload data
+├── data_query.py                      # Flask app to serve and upload data
 └── README.md
 ```
 
@@ -52,7 +52,7 @@ python generate_data.py
 Run the API server:
 
 ```bash
-python app.py
+python data_query.py
 ```
 
 The server runs at: `http://127.0.0.1:5000`
@@ -138,7 +138,7 @@ API endpoints are wrapped in a profiler and will print performance stats to the 
 
 ```bash
 python generate_data.py
-python app.py
+python data_query.py
 # In browser or Postman:
 http://127.0.0.1:5000/users?min_age=30&city=Chicago
 http://127.0.0.1:5000/upload_db?employed=true
